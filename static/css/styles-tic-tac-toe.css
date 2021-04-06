@@ -1,0 +1,67 @@
+:root {
+  --light: #fff;
+  --background: #043927;
+  --background-light: #538675;
+  --accent: #810000;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: var(--background-light);
+    background-image: url('../img/tic-tac-toe-background.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+
+.game-title {
+    margin: 50px 50px 0px 50px;
+    color: var(--background);
+    font-size: 4rem;
+}
+.game-result {
+    margin: 0 50px;
+    color: var(--accent);
+    height: 50px;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: var(--background);
+    padding: 5px;
+    margin: 50px 50px 0px 50px;
+}
+
+.grid-item {
+background-color: rgba(255, 255, 255, 0.85);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 10px;
+font-size: 30px;
+text-align: center;
+}
+
+.btn-field {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    font-size: 60px;
+    color: var(--background);
+}
+.btn-field:disabled {
+    color: var(--background);
+}
+
+
+.card-btn {
+  background-color: var(--background) !important;
+  color: var(--light);
+  padding: 20px;
+}
+
+.card-btn:hover {
+  color: var(--background-light);
+}

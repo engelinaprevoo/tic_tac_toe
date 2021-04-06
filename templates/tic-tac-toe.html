@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/styles-tic-tac-toe.css')}}" rel="stylesheet">
+
+</head>
+<body>
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <form action="{{ url_for('tic_tac_toe_app') }}" method="post" enctype="multipart/form-data">
+        <div class="grid-container">
+
+            <div class="grid-item">
+                {% if fields[0] == "" %}
+                <button type="submit" name="btn-field" value="0"
+                        class="btn-field">{{ fields[0] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="0"
+                        class="btn-field" disabled>{{ fields[0] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[1] == "" %}
+                <button type="submit" name="btn-field" value="1"
+                        class="btn-field">{{ fields[1] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="1"
+                        class="btn-field" disabled>{{ fields[1] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[2] == "" %}
+                <button type="submit" name="btn-field" value="2"
+                        class="btn-field">{{ fields[2] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="2"
+                        class="btn-field" disabled>{{ fields[2] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[3] == "" %}
+                <button type="submit" name="btn-field" value="3"
+                        class="btn-field">{{ fields[3] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="3"
+                        class="btn-field" disabled>{{ fields[3] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[4] == "" %}
+                <button type="submit" name="btn-field" value="4"
+                        class="btn-field">{{ fields[4] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="4"
+                        class="btn-field" disabled>{{ fields[4] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[5] == "" %}
+                <button type="submit" name="btn-field" value="5"
+                        class="btn-field">{{ fields[5] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="5"
+                        class="btn-field" disabled>{{ fields[5] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[6] == "" %}
+                <button type="submit" name="btn-field" value="6"
+                        class="btn-field">{{ fields[6] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="6"
+                        class="btn-field" disabled>{{ fields[6] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[7] == "" %}
+                <button type="submit" name="btn-field" value="7"
+                        class="btn-field">{{ fields[7] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="7"
+                        class="btn-field" disabled>{{ fields[7] }}</button>
+                {% endif %}
+            </div>
+
+            <div class="grid-item">
+                {% if fields[8] == "" %}
+                <button type="submit" name="btn-field" value="8"
+                        class="btn-field">{{ fields[8] }}</button>
+                {% else %}
+                <button type="submit" name="btn-field" value="8"
+                        class="btn-field" disabled>{{ fields[8] }}</button>
+                {% endif %}
+            </div>
+
+        </div>
+        <div class="game-result">
+            <h2>{{ game_result }}</h2>
+        </div>
+        <div>
+            <button type="submit" name="btn-field" value="reset" class="card-btn">Reset Game</button>
+        </div>
+    </form>
+
+
+</body>
+</html>
